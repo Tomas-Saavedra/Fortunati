@@ -1,0 +1,578 @@
+/* Variables */
+:root {
+    --main-color: #F1CC54;
+    --main-color-dark: #191919;
+    --second-color: #DC8915;
+    --bg-color: #ebebeb;
+    --light-color: #ebebeb;
+    --third-color: #2297EF;
+  }
+
+/* Generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: var(--bg-color);
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+    color:#171717;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Whatsapp */
+
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+/* Barra Superior */
+.marca {
+    background: url('../img/Logo_fortunati_sin_texto.svg') no-repeat center;
+    /* background-color: red; */
+    background-size: contain;
+    width: 200px;
+    height: 100%;
+}
+
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: calc(100% - 20px);
+    background-color: var(--main-color-dark);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px 10px 0;
+}
+
+.marca {
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+/* Secciones */
+.seccion-inicio,
+.seccion-alojamiento,
+.seccion-galeria,
+.seccion-equipamento,
+.seccion-consultas,
+.seccion-contacto {
+    width: auto;
+    text-align: center;
+}
+
+/* Seccion inicio */
+.seccion-inicio {
+    height: 80vh;
+    margin-top: 54px;
+    background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)),url('../img/foto5.webp') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+}
+
+.seccion-inicio h1 {
+    font-size: 72px;
+    letter-spacing: 20px;
+    color:var(--light-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.logo-principal {
+    width: 200px;
+}
+
+/* Seccion datos*/
+.seccion-datos {
+    background-color: var(--main-color-dark);
+    width: auto;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 15vh;
+}
+
+.item-datos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-datos i {
+    color: var(--main-color);
+    margin-right: 30px;
+    font-size: 45px;
+    
+}
+
+.item-datos h2 {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.item-datos p {
+    color: var(--light-color);
+}
+
+/* Seccion alojamiento */
+.alojamiento-titulo h2 {
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--second-color);
+    font-size: 27px;
+    margin-bottom: 3rem;
+}
+
+.seccion-alojamiento {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 100px;
+    height: 950px;
+}
+
+.seccion-alojamiento p {
+    margin-top: 20px;
+}
+
+.caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caracteristica-item {
+    margin: 50px 50px;
+    width: 300px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 15% 45%;
+}
+
+.caracteristica-item i {
+    color: var(--second-color);
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.caracteristica-item h3 {
+    height: auto;
+    color: var(--second-color);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.caracteristica-item p {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.caracteristica-texto {
+    font-size: 14px;
+}
+
+.barra-separadora {
+    background-color: var(--second-color);
+    width: 100px;
+    height: 3px;
+    border-radius: 1px;
+    margin: 0 auto 40px auto;
+}
+
+/* Seccion galeria */
+.seccion-galeria {
+    height: auto;
+    margin-top: 50px;
+    padding: 5rem 0;
+    background: linear-gradient(rgba(32, 32, 32, 0.95),rgba(29, 29, 29, 0.95)),url('../img/foto4.webp') no-repeat center;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+.galeria-titulo {
+    font-weight: 800;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+    color: var(--light-color);
+    font-size: 27px;
+}
+
+.galeria{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 30px;
+}
+
+.img {
+    width: 200px;
+    height: 140px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.img:hover {
+    transform: scale(1.05);
+}
+
+.ultima {
+    background-image: url('../img/foto_final_c.webp');
+    display: flex;
+}
+
+.ultima p {
+    margin: auto;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.full-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0,0, 0.9);
+}
+
+span {
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.x {
+    position:absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 32px;
+}
+
+.next {
+    position:absolute;
+    top:45%;
+    right: 15%;
+    font-size: 32px;
+}
+
+.previous {
+    position:absolute;
+    top:45%;
+    left: 15%;
+    font-size: 32px;
+}
+
+.img-preview {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    bottom: 10%;
+    max-width: 35%;
+}
+
+.contenedor-carrusel {
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    bottom:0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.img-carrusel {
+    width: 130px;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.1s;
+    margin: 0 10px;
+}
+
+.img-carrusel:hover {
+    transform: scale(1.1);
+}
+
+.img-carrusel-principal {
+    position: relative;
+    bottom: 20px;
+    width: 150px;
+    height: 110px;
+    background-image: url(../Foto1.jpg);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+@media screen and (max-width:400px){
+    h1{
+        text-decoration: underline;
+    }
+    h1::before{
+        display: none;
+    }
+    h1 span{
+        padding: 0;
+    }
+}
+
+/* Seccion equipamento */
+
+.seccion-equipamento h2 {
+    padding-bottom: 50px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--second-color);
+    font-size: 27px;
+}
+
+.seccion-equipamento {
+    padding: 100px 0;
+}
+
+.equipamento-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-exhibicion {
+    width: 50%;
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.equipamento-descripcion {
+    font-size: 15px;
+    padding: 0 100px;
+    margin-bottom: 30px;
+}
+
+.lista-equipamento {
+    width: 50%;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.lista-equipamento li {
+    font-size: 16px;
+}
+
+.lista-equipamento i {
+    margin-right: 10px;
+    color: var(--second-color)
+}
+
+.video-exhibicion iframe {
+    width: 600px;
+    height: 350px;
+    border-radius: 8px;
+}
+
+.lista-equipamento ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-equipamento li {
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+
+.seccion-consultas {
+    height: 85vh;
+    margin-top: 50px;
+    background: linear-gradient(rgba(32, 32, 32, 0.95),rgba(29, 29, 29, 0.95)),url('../img/foto3.webp') no-repeat center;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+.seccion-consultas h2 {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: var(--light-color);
+    font-size: 27px;
+}
+
+.contenedor-consultas {
+    margin-top: 30px;
+    display: flex;
+}
+
+.campo-datos {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.formulario {
+    width: 50%;
+}
+
+.contacto {
+    padding-left: 100px;
+    display: block;
+    text-align: left;
+    width: 50%;
+}
+
+.contacto h3 {
+    color: var(--main-color);
+}
+
+.contacto p {
+    color: var(--light-color);
+    margin-bottom: 20px;
+}
+
+.contacto p:last-child {
+    margin-bottom: 0;
+}
+
+form {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2fr 3fr 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+}
+
+input {
+    display: block;
+    margin: 0;
+    padding-left:5px;
+    border: solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #7e7e7e;
+    font-family: "Poppins", sans-serif;
+}
+
+#nombre,
+#telefono {
+    margin-right: 20px;
+}
+
+#consulta {
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+button {
+    background-color: var(--second-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: var(--light-color);
+    font-weight: 600;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Seccion mapa */
+
+.mapa {
+    width: 100%;
+}
+
+/* Pie de Página */
+footer {
+    padding: 50px 0;
+    background-color: var(--main-color-dark);
+    color: var(--light-color);
+    text-align: center;
+    width: 100%;
+}
+
+footer h1 {
+    color: var(--light-color);
+    letter-spacing: 10px;
+}
+
+footer p {
+    color: var(--light-color);
+}
+
+.barra-separadora-footer {
+    background-color: #797979;
+    width: 90%;
+    height: 1px;
+    border-radius: 1px;
+    margin: 20px auto 20px auto;
+}
