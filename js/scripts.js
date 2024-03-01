@@ -1,5 +1,3 @@
-// Controles full img
-
 var fullImgContainer = document.querySelector(".full-img")
 var fullImg = document.querySelector(".img-preview")
 
@@ -40,6 +38,8 @@ function imagenCarrusel(nro) {
     colocarImg(imgCarrusel6, nro_fix + 3)
 }
 
+// Controles full img
+
 function openFulImg(nro){
     fullImgContainer.style.display = "flex";
     fullImg.src = `img/foto${nro}.webp`;
@@ -69,6 +69,18 @@ function previousImg() {
 function closeImg(){
     fullImgContainer.style.display = "none";
 }
+
+function presionarTecla() {
+    tecla = event.keyCode;
+
+    if(tecla == 37){
+        return previousImg()
+    } else if (tecla == 39) {
+        return nextImg()
+    }
+}
+
+window.onkeydown = presionarTecla;
 
 // Galeria
 
