@@ -127,7 +127,7 @@ function ultimaImagenGaleria(total, nro){
 // Agregar fotos a la galeria
 
 var cantidadTotal = 22;
-var cantidadFotosGaleria = 15;
+var cantidadFotosGaleria = 10;
 
 for (var i = 0; i <= cantidadFotosGaleria - 2; i++) {
     nuevaImagenGaleria(i);
