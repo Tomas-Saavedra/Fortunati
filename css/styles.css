@@ -102,7 +102,7 @@ footer {
 
 /* Secciones */
 .seccion-inicio,
-.seccion-alojamiento,
+.seccion-estadia,
 .seccion-galeria,
 .seccion-equipamento,
 .seccion-consultas,
@@ -168,8 +168,8 @@ footer {
     color: var(--light-color);
 }
 
-/* Seccion alojamiento */
-.alojamiento-titulo h2 {
+/* Seccion estadia */
+.estadia-titulo h2 {
     font-weight: 800;
     letter-spacing: 10px;
     color: var(--second-color);
@@ -177,30 +177,32 @@ footer {
     margin-bottom: 3rem;
 }
 
-.seccion-alojamiento {
+.seccion-estadia {
     width: 85%;
     margin: 0 auto;
     padding-top: 100px;
     height: 950px;
 }
 
-.seccion-alojamiento p {
+.seccion-estadia p {
     margin-top: 20px;
 }
 
 .caracteristicas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem;
 }
 
 .caracteristica-item {
-    margin: 50px 50px;
-    width: 300px;
+    width: 50%;
     height: 200px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 40% 15% 45%;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
 }
 
 .caracteristica-item i {
@@ -260,13 +262,13 @@ footer {
     width: 80%;
     margin: 50px auto 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 30px;
 }
 
 .img {
-    width: 200px;
-    height: 140px;
+    width: 250px;
+    height: 190px;
     background-position: center;
     background-size: cover;
     cursor: pointer;
