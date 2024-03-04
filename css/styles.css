@@ -279,7 +279,7 @@ footer {
     transform: scale(1.05);
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .galeria {
         grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
     }
@@ -394,7 +394,7 @@ span {
     }
 }
 
-@media (min-width:1024px) {
+@media screen and (min-width:1024px) {
     .img-preview {
         max-width: 60%;
     }
@@ -464,7 +464,7 @@ span {
     margin-bottom: 10px;
 }
 
-@media (min-width:1024px) {
+@media screen and (min-width:1024px) {
     .video-exhibicion iframe {
         width: calc(100% - 40px);
         height: 400px;
