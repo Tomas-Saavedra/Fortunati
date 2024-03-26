@@ -343,7 +343,7 @@ span {
     margin: auto;
     inset: 0;
     bottom: 10%;
-    max-width: 35%;
+    height: 80vh;
 }
 
 .contenedor-carrusel {
