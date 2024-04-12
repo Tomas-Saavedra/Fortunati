@@ -31,12 +31,26 @@
             <a href="#equipamento">Equipamento</a>
             <a href="#consultas">Consultas</a>
         </nav>
+        <div class="menu-burger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
+        <div class="menu-cerrar"><p onclick="closeMenu()">X</p></div>
+
     </header>
+
+    <!-- Menu flotante -->
+    <div class="contenedor-menu-flotante">
+        <nav class="menu-flotante">
+            <a href="#inicio">Inicio</a>
+            <a href="#estadia">Estadía</a>
+            <a href="#galeria">Galería</a>
+            <a href="#equipamento">Equipamento</a>
+            <a href="#consultas">Consultas</a>
+        </nav>
+    </div>
 
     <!-- Seccion Inicio -->
     <section id="inicio" class="seccion-inicio">
         <img src="img/Logo_fortunati_sin_texto.svg" alt="" class="logo-principal">
-        <h1>FORTUNATI</h1>
+        <h1> FORTUNATI</h1>
     </section>
 
     <!-- Seccion Datos-->
@@ -172,7 +186,7 @@
                 <p>Belgrano 475, San Miguel</p>
             </div>
             <div class="formulario">
-                <form action="#" method="post">
+                <form action="enviar.php" method="post">
                     <div class="campo-datos">
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>

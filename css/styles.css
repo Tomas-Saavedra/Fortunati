@@ -80,11 +80,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 20px 10px 0;
-}
-
-.marca {
-    font-size: 24px;
+    padding:15px 20px 15px 0;
 }
 
 .menu {
@@ -99,6 +95,67 @@ footer {
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
+}
+
+.menu-burger {
+    display: none;
+}
+
+.menu-cerrar {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .menu {
+        display: none;
+    }
+    
+    .marca {
+        width: 10em;
+    }
+
+    .menu-burger {
+        display: inline;
+        font-size: 1.5em;
+    }
+
+    .menu-cerrar p {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+    }
+
+}
+
+/* Menu flotante */
+
+@media screen and (max-width: 450px) {
+
+    .contenedor-menu-flotante {
+        position: fixed;
+        display: none;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: rgb(13, 13, 13, 0.9);
+        transition: ease-in-out 1s;
+    }
+
+    .menu-flotante {
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-flotante a {
+        text-align: right;
+        color: var(--light-color);
+        text-decoration: none;
+        padding-top: 2.5em;
+        margin-right: 1em;
+        font-size: 1.3em;
+    }
+
 }
 
 /* Secciones */
@@ -122,6 +179,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: var(--light-color);
 }
 
@@ -134,6 +192,14 @@ footer {
 
 .logo-principal {
     width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .seccion-inicio h1 {
+        font-size: 2em;
+    }
+
 }
 
 /* Seccion datos*/
@@ -169,6 +235,29 @@ footer {
     color: var(--light-color);
 }
 
+@media screen and (max-width: 450px) {
+
+    .seccion-datos {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 2em;
+        padding: 2em 0;
+    }
+
+    .item-datos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        text-align: left;
+    }
+
+    .item-datos i {
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
 /* Seccion estadia */
 .estadia-titulo h2 {
     font-weight: 800;
@@ -182,7 +271,6 @@ footer {
     width: 85%;
     margin: 0 auto;
     padding-top: 100px;
-    height: 950px;
 }
 
 .seccion-estadia p {
@@ -239,6 +327,26 @@ footer {
     height: 3px;
     border-radius: 1px;
     margin: 0 auto 40px auto;
+}
+
+@media screen and (max-width: 450px) {
+
+    .caracteristicas {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .caracteristica-item {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 15% 45%;
+        row-gap: 0.5em;
+        justify-content: center;
+        align-items: center;
+        margin: 3em auto;
+    }
 }
 
 /* Seccion galeria */
@@ -382,19 +490,34 @@ span {
     margin: 0 20px;
 }
 
-@media screen and (max-width:400px){
-    h1{
-        text-decoration: underline;
+@media screen and (max-width:450px){
+
+    .img-preview {
+        bottom: 0;
+        height: 50vh;
     }
-    h1::before{
+
+    .next {
+        position:absolute;
+        top:50%;
+        right:2%;
+        font-size: 32px;
+    }
+    
+    .previous {
+        position:absolute;
+        top:50%;
+        left: 2%;
+        font-size: 32px;
+    }
+
+    .contenedor-carrusel {
         display: none;
-    }
-    h1 span{
-        padding: 0;
     }
 }
 
 @media screen and (min-width:1024px) {
+
     .img-preview {
         max-width: 60%;
     }
@@ -471,6 +594,43 @@ span {
         border-radius: 8px;
     }
     
+}
+
+@media screen and (max-width:450px){
+
+    .equipamento-descripcion {
+        padding: 2em;
+    }
+
+    .seccion-equipamento h2 {
+        padding: 1em;
+    }
+
+    .equipamento-container {
+        flex-wrap: wrap;
+    }
+
+    .video-exhibicion {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    .video-exhibicion iframe {
+        width: 90%;
+        height: 15em;
+        border-radius: 8px;
+    }
+
+    .lista-equipamento {
+        width: 100%;
+        display: block;
+        text-align: left;
+        margin-top: 2em;
+        padding-left: 2em;
+    }
+
 }
 
 /* Consultas */
@@ -569,10 +729,37 @@ button {
     border-radius: 5px;
 }
 
+@media screen and (max-width: 450px) {
+
+    .contenedor-consultas {
+        flex-wrap:wrap-reverse;
+    }
+
+    .formulario {
+        width: 50%;
+    }
+
+    .contacto {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 4em;
+        text-align: center;
+    }
+
+}
+
 /* Seccion mapa */
 
 .mapa {
     width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+
+    .mapa {
+        height: 40vh;
+    }
+
 }
 
 /* Pie de Página */

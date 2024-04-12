@@ -1,5 +1,23 @@
 var fullImgContainer = document.querySelector(".full-img")
 var fullImg = document.querySelector(".img-preview")
+var menu = document.querySelector(".contenedor-menu-flotante")
+var menuBurger = document.querySelector(".menu-burger")
+var menuCerrar = document.querySelector(".menu-cerrar")
+
+// Menu flotante
+
+function openMenu(){
+    menu.style.display = "block";
+    menuBurger.style.display = "none";
+    menuCerrar.style.display = "inline";
+}
+
+function closeMenu(){
+    menu.style.display = "none";
+    menuCerrar.style.display = "none";
+    menuBurger.style.display = "inline";
+    
+}
 
 // Miniatura
 
