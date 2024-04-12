@@ -6,21 +6,20 @@ $correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
 $consulta = $_POST['consulta'];
 
-$formcontent="
-    Nombre: $nombre \n
-    Apellido: $apellido \n
-    Correo: $correo
-    Telefono: $telefono \n
-    Consulta: $consulta
-";
+echo $nombre
 
-$recipient = "tomysaave@gmail.com";
+// $formcontent="
+//     Nombre: $nombre \n
+//     Apellido: $apellido \n
+//     Correo: $correo \n
+//     Telefono: $telefono \n
+//     Consulta: $consulta
+// ";
 
-$subject = "Test - 1 de marzo 2024";
+// $recipient = "tomysaave@gmail.com";
 
-$header = "From: $email \r\n";
-$header .= "Content-Type: text/plain; charset=UTF-8";
-mail($recipient, $subject, $formcontent, $header) or die("Error!");
-header("Location: index.html");
+// $subject = "Consulta por Belgrano 475 - $nombre";
 
+// mail($recipient, $subject, $formcontent);
+header("Location:index.html");
 ?>
