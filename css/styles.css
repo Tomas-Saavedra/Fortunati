@@ -163,7 +163,7 @@ footer {
 .seccion-estadia,
 .seccion-galeria,
 .seccion-equipamento,
-.seccion-consultas,
+.seccion-informacion,
 .seccion-contacto {
     width: auto;
     text-align: center;
@@ -633,16 +633,16 @@ span {
 
 }
 
-/* Consultas */
+/* informacion */
 
-.seccion-consultas {
+.seccion-informacion {
     padding: 6rem 0;
     background: linear-gradient(rgba(32, 32, 32, 0.95),rgba(29, 29, 29, 0.95)),url('../img/foto3.webp') no-repeat center;
     background-size: cover;
     color: var(--light-color);
 }
 
-.seccion-consultas h2 {
+.seccion-informacion h2 {
     margin-bottom: 3rem;
     font-weight: 800;
     letter-spacing: 10px;
@@ -650,27 +650,15 @@ span {
     font-size: 27px;
 }
 
-.contenedor-consultas {
+.contenedor-informacion {
     margin-top: 30px;
     display: flex;
 }
 
-.campo-datos {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-}
-
-.formulario {
-    width: 50%;
-}
-
 .contacto {
-    padding-left: 100px;
     display: block;
-    text-align: left;
-    width: 50%;
+    text-align: center;
+    width: 100%;
 }
 
 .contacto h3 {
@@ -731,7 +719,7 @@ button {
 
 @media screen and (max-width: 450px) {
 
-    .contenedor-consultas {
+    .contenedor-informacion {
         flex-wrap:wrap-reverse;
     }
 
